@@ -1,5 +1,7 @@
 package _00_Intro_to_Sorting_Algorithms;
 
+import java.util.Random;
+
 class _02_SwappingDigits {
 
     // 1. Complete the method so that the first two elements of the array are
@@ -17,6 +19,7 @@ class _02_SwappingDigits {
     //    Iterate through the array and when you find two elements that are out
     //    of order, swap them. Repeat this until the array is in order.
     public static void sortIntArray(int[] arr) {
+    	Random random = new Random();
     	boolean isSorted = false;
     	int counter = 0;
     	while (isSorted == false) {

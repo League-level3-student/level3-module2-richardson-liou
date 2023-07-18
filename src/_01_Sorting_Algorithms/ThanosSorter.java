@@ -1,5 +1,7 @@
 package _01_Sorting_Algorithms;
 
+import java.util.Random;
+
 public class ThanosSorter extends Sorter {
     public ThanosSorter() {
         type = "Thanos";
@@ -44,7 +46,40 @@ public class ThanosSorter extends Sorter {
      * algorithm is up to you!
      */
     @Override
-    void sort(int[] arr, SortingVisualizer display) {
-        
+    void sort(int[] array, SortingVisualizer display) {
+    	Random random = new Random();
+		boolean isSorted = false;
+
+		int counter = 0;
+		int start = 0;
+		int end = array.length;
+				
+		while (isSorted == false) {
+			System.out.println(start);
+			counter = 0;
+			for (int i = 0; i < array.length - 1; i++) {
+
+				if (array[i] > array[i + 1]) {
+					counter = 1;
+					System.out.println("Found out of place");
+					break;
+				}
+
+			}
+			if (counter != 0) {
+				
+				for(int i = start; i< (end-start)/2; i++) {
+					array[i] =0;
+					//start = (end-start)/2;
+					
+				}
+				counter = 1;
+				isSorted = false;
+			} else {
+				isSorted = true;
+				System.out.println("Is sorted");
+			}
+			display.updateDisplay();
+		}
     }
 }
