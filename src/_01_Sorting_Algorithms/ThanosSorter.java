@@ -51,13 +51,13 @@ public class ThanosSorter extends Sorter {
 		boolean isSorted = false;
 
 		int counter = 0;
-		int start = 0;
+		int start = 125;
 		int end = array.length;
 				
 		while (isSorted == false) {
 			System.out.println(start);
 			counter = 0;
-			for (int i = 0; i < array.length - 1; i++) {
+			for (int i = 0; i < start; i++) {
 
 				if (array[i] > array[i + 1]) {
 					counter = 1;
@@ -68,11 +68,12 @@ public class ThanosSorter extends Sorter {
 			}
 			if (counter != 0) {
 				
-				for(int i = start; i< (end-start)/2; i++) {
+				
+				for(int i = start; i< end; i++) {
 					array[i] =0;
-					//start = (end-start)/2;
-					
+				
 				}
+				start = start/2;
 				counter = 1;
 				isSorted = false;
 			} else {
@@ -80,6 +81,7 @@ public class ThanosSorter extends Sorter {
 				System.out.println("Is sorted");
 			}
 			display.updateDisplay();
+			
 		}
     }
 }
