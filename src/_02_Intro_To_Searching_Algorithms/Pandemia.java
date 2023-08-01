@@ -24,7 +24,7 @@ public class Pandemia {
 				System.out.println(infected);
 				System.out.println(foundInfected);
 				if(foundInfected == true) {
-					System.out.println("adding");
+					
 					infected +=counter;
 				}
 				counter = 0;
