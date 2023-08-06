@@ -19,12 +19,12 @@ public class _00_MoreAndMoreTests {
    }
  
 //   @Test
-//   public void PrimeTest() {
-//     assertTrue(Algorithms.isPrime(3));
-//     assertTrue(Algorithms.isPrime(5));
-//     assertTrue(Algorithms.isPrime(541));
-//     assertFalse(Algorithms.isPrime(4));
-//     assertFalse(Algorithms.isPrime(12));
+public void PrimeTest() {
+     assertTrue(Algorithms.isPrime(3));
+     assertTrue(Algorithms.isPrime(5));
+     assertTrue(Algorithms.isPrime(541));
+     assertFalse(Algorithms.isPrime(4));
+     assertFalse(Algorithms.isPrime(12));
 //     assertFalse(Algorithms.isPrime(527));
 //   }
 //
