@@ -71,4 +71,28 @@ public class Algorithms {
     	}
     }
     
+    public static int countPearls(List<Boolean> oysters) {
+    	int counter = 0;
+    	for (int i = 0; i< oysters.size();i++) {
+    		if (oysters.get(i)) {
+    			counter+=1;
+    		
+    			
+    		}
+    	}
+    	return counter;
+    }
+    
+    public static double findTallest(List<Double> heights) {
+    	double max = 0;
+    	for (int i = 0; i< heights.size();i++) {
+    		if (heights.get(i)>max) {
+    			max =heights.get(i);
+    		
+    			
+    		}
+    	}
+    	return max;
+    }
+    
 }
