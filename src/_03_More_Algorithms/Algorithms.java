@@ -94,5 +94,125 @@ public class Algorithms {
     	}
     	return max;
     }
-    
+
+	public static String findLongestWord(List<String> words) {
+		int max = 0;
+		String index = "";
+		for (int i = 0; i< words.size();i++) {
+    		if (words.get(i).length()>max) {
+    			max = words.get(i).length();
+    			index = words.get(i);
+    		
+    			
+    		}
+    	}
+		System.out.println(index);
+		return index;
+		
+			}
+
+	public static boolean containsSOS(List<String> message1) {
+		// TODO Auto-generated method stub
+		String sos = "... --- ...";
+		boolean containsSOS = false;
+		for(int i = 0; i<message1.size();i++) {
+			if(message1.get(i).equals(sos)) {
+				containsSOS = true;
+			}
+			
+		}
+		System.out.println(containsSOS);
+		return containsSOS;
+		
+	}
+
+	public static List<Double> sortScores(List<Double> results) {
+		// TODO Auto-generated method stub
+		boolean isSorted = false;
+    	int counter = 0;
+    	while (isSorted == false) {
+    		counter = 0;
+    		for(int i = 0; i< results.size()-1;i++) {
+    			
+    			if (results.get(i) > results.get(i+1)) {
+    				Double temp = results.get(i);
+    				Double nextTemp = results.get(i+1);
+    				results.set(i,nextTemp);
+    				results.set(i+1,temp);
+    				counter = 1;
+    			}
+    			
+    		}
+    		if (counter != 0) {
+    			isSorted = false;
+    		}
+    		else {
+    			isSorted = true;
+    		}
+	   
+    	}System.out.println(results);
+    	return results;
+}
+
+	public static List<String> sortDNA(List<String> unsortedSequences) {
+		// TODO Auto-generated method stub
+		boolean isSorted = false;
+    	int counter = 0;
+    	while (isSorted == false) {
+    		counter = 0;
+    		for(int i = 0; i< unsortedSequences.size()-1;i++) {
+    			
+    			if (unsortedSequences.get(i).length() > unsortedSequences.get(i+1).length()) {
+    				String temp = unsortedSequences.get(i);
+    				String nextTemp = unsortedSequences.get(i+1);
+    				unsortedSequences.set(i,nextTemp);
+    				unsortedSequences.set(i+1,temp);
+    				counter = 1;
+    			}
+    			
+    		}
+    		if (counter != 0) {
+    			isSorted = false;
+    		}
+    		else {
+    			isSorted = true;
+    		}
+		
+	}
+    	System.out.println(unsortedSequences);
+    	return unsortedSequences;
+	
+	}
+
+	public static List<String> sortWords(List<String> words) {
+		// TODO Auto-generated method stub
+		boolean isSorted = false;
+    	int counter = 0;
+    	while (isSorted == false) {
+    		counter = 0;
+    		for(int i = 0; i< words.size()-1;i++) {
+    			
+    			if (words.get(i).compareTo(words.get(i+1))>0) {
+    				
+    				String temp = words.get(i);
+    				System.out.println(temp);
+    				String nextTemp =words.get(i+1);
+    				System.out.println(nextTemp);
+    				words.set(i,nextTemp);
+    				words.set(i+1,temp);
+    				counter = 1;
+    			}
+    			
+    		}
+    		System.out.println(words);
+    		if (counter != 0) {
+    			isSorted = false;
+    		}
+    		else {
+    			isSorted = true;
+    		}
+		
+	}
+		return words;
+	}
 }
